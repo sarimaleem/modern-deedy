@@ -38,11 +38,10 @@
 % vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
 \newcommand{\yourWebsiteLink}{https://abdullaharif.tech}
 \newcommand{\yourEmail}{sarimaleem99@gmail.com}
-\newcommand{\yourPhone}{1-234-567-890}
+\newcommand{\yourPhone}{281-804-5071}
 \newcommand{\githubUserName}{sarimaleem}
 \newcommand{\linkedInUserName}{sarim-aleem}
 
-% An alternate profile section 
 % \alignProfileTable
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
@@ -68,27 +67,25 @@
 %--------------------------------------------------------------
 \section{Education}
 % Put school first and degree second if your school is reputable
-\educationHeading{B.S. Computer Science, Minor Arabic}{University of Texas at Austin}{Austin, TX}{May 2024}
+\educationHeading{University of Texas at Austin}{B.S. Computer Science, Minor Arabic, GPA: 3.83}{Austin, TX}{May 2024}
 
 % \teacherAssistant{World Wide Web Information Systems Development}
-\courseWork{Data Structures, Algorithms, Computer Architecture, Operating Systems, Distributed Systems, Compilers}
+\courseWork{Data Structures, Algorithms, Computer Architecture, Operating Systems, Distributed Systems, Compilers, Computer Networks, Intro to Machine Learning}
 \sectionsep
 
 %--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
-\resumeHeading{Fujitsu Network Communications}{Software Development Engineer Intern}{Dallas TX}{Jun 2022 – Aug 2022}
+\resumeHeading{Fujitsu Network Communications}{Software Development Intern}{Dallas TX}{Jun 2022 – Aug 2022}
 \begin{bullets}
-    \item Developed Custom Webclient to store network topology in Configuration Persistent Storage database using Java Spring
+    \item Developed custom webclient to store network topology data in Configuration Persistent Storage database using Java Spring
+    \item (alternative?) Migrated network element data storage platform from MongoDB to CPS using Java Spring
     \item Configured Docker files so microservices can communicate with each other in docker-compose
-    % \item Designed and implemented a dashboard using \textbf{React} and \textbf{TypeScript} to visualize data stored in \textbf{DynamoDB}, decreasing time to understand delivery driver work sessions by over 10 times.
-    %  \item Here is another bullet that I might choose to uncomment for some jobs
-    % \item Ensured only authorized employees have access to the application by creating an \textbf{AWS Lambda@Edge} function to intercept and sign valid requests.
-    % \item Devised and deployed the infrastructure in TypeScript through \textbf{AWS CDK}, then created efficient algorithms to process data from a custom \textbf{REST API}, so it could scale to handle millions of deliveries.
-    % \item Setup a CI/CD pipeline and exceeded requirements in each stage, which lead to the application being pushed to production.
-    \item Created bash scripts to automate container deployment and testing REST endpoints
+    \item (alternative?) Configured network bridge in Docker files in order for microservices to communicate with each other
     \item Migrated topological discovery of network elements from direct drivers to a software defined network controller
+    \item Created bash scripts to automate container deployment and test REST endpoints
+    \item Used Java reactive streams to load balance client requests from frontend and ensure requests are nonblocking (sounds fancier than it is)
 \end{bullets}
 \sectionsep
 
@@ -96,10 +93,11 @@
 \begin{bullets}
     % \item Developed a Personal Health Record (PHR) system in \textbf{\href{https://spring.io/}{Spring}} based on the theoretical model outlined in \underlinedLink{https://research.library.mun.ca/11920}{Mitu Kumar's thesis}.
     % \item Applied the \href{https://link.springer.com/chapter/10.1007/978-3-642-10838-9\_23}{mCP-ABE} encryption scheme using the \href{http://gas.dia.unisa.it/projects/jpbc/}{JPBC} library, so patients have fine-grained access control over their health records with the ability to instantly revoke access.
-    \item Created a Computer Vision Model in C++ to fit Ellipses to pupils of mice, improving speed over deep learning model by \textbf{50x}
-    \item Programmed a Python library to analyze pupil dilation of mice that was used in the lab
-    \item Coauthored paper submitted to Advances and Perspectives in Auditory Neuroscience
-    \item Manipulated and Analyzed Data with Pandas and Matplotlib
+    \item Created computer vision model in C++ to fit ellipses to pupils of mice, improving speed over deep learning model by \textbf{50x}
+    \item (alternative?) Created computer vision model in c++ to analyze mice pupil dialation size, faster than deep learning model by \textbf{50x}
+    \item Programmed Tkinter GUI to edit audio files based on signal patterns and spectrogram
+    \item Developed Python library to analyze pupil dilation of mice 
+    \item Analyzed and Visualized Data with Pandas and Matplotlib 
 \end{bullets}
 \sectionsep
 
@@ -108,38 +106,41 @@
 %--------------------------------------------------------------
 \section{Projects}
 
-\projectHeading{Commandline Blog}{https://github.com/sarimaleem/slog}{TypeScript, Express, MongoDB}
-Created A web server where users can upload blog posts in markdown and automatically convert it to HTML. \\
-% A security research tool to send targeted spam messages on either Facebook or Twitter. The program analyzes the feed of its target to increase the effectiveness of the messages.\\
+\projectHeading{Markdown based Content Management System}{https://github.com/sarimaleem/slog}{Go, TypeScript, Express, MongoDB}
+\begin{bullets}
+    \item Created web server where users can upload markdown content using Go based Command line app
+    \item Deployed Web server using GCP that converts markdown to HTML accessible through REST endpoints
+\end{bullets}
 \sectionsep
-  
-% \projectHeading{Image Repository}{https://github.com/Aarif123456/image\_repository}{Java, PHP, React, TypeScript, Maven, GCP, MySQL}
-% A full-stack image repository, where users can store their files. Created a GCP cloud function to implement \href{https://www.cs.utexas.edu/~bwaters/publications/papers/cp-abe.pdf}{CP-ABE} encryption and used it to ensure files are secure at rest.\\
-% \sectionsep
 
-% \projectHeading{Biometric Dynamic Keystroke Spoofer}{https://github.com/Aarif123456/KeystrokeDynamicsSpoofer}{Python, Object-Oriented Design, CyberSecurity}
-% A program that authenticates users based on their typing patterns. And a spoofer that uses the genetic algorithm to mimic the user's typing pattern.
-% \sectionsep
+\projectHeading{Distributed Key-Value Store with Load Balancing}{}{Java, Distributed Systems}
 
-\projectHeading{Distributed Key-Value Store with Load Balancing}{}{Java, Distributed Systems, Concurrency}
-A Distributed key-value which replicates data with fault tolerance using Paxos and balances workloads towards different nodes based node traffic.
+\begin{bullets}
+    \item Created linearizable distributed key value Store which replicates data with fault tolerance using Paxos.
+    \item Load balanced key/value workloads using sharded Paxos based replica groups
+\end{bullets}
+\sectionsep
+
+\projectHeading{Pintos Operating System}{}{C, Concurrency, Operating Systems}
+\begin{bullets}
+    \item Implemented Operating System with Thread Priority Scheduling, System Calls, Virtual Memory, and EXT based File System
+    \item Debugged race conditions, deadlocks, memory errors, and other bugs using GDB
+\end{bullets}
 \sectionsep
 
 \projectHeading{Multiplayer Gomoku with AI}{https://multitictactoe.herokuapp.com/}{Javascript, Express, Web Sockets}
-Created website where players can play Gomoku with each other with communication through websockets. Implemented AI using Minimax with Alpha Beta Pruning for single player. 
+\begin{bullets}
+    \item Created multiplayer website with communication through websockets
+    \item Implemented single player mode with AI using Minimax with Alpha Beta Pruning for 
+\end{bullets}
 \sectionsep
 
-% \projectHeading{War of Weebles}{https://github.com/Aarif123456/GoalOrientedBehaviour}{C\#, Unity, Concurrency, Artificial Intelligence}
-% A capture-the-flag-styled shooting game composed of AI-controlled players. The agents change their goals based on various factors, such as their health, current weapon, their personality and what they see.\\
-% \sectionsep
+\projectHeading{Sorting Website}{https://sorting-visualizer-1a3ee.firebaseapp.com/}{React.js, Firebase}
+\begin{bullets}
+    \item Created website to visualize sorting algorithms using React.js, deployed using firebase
+\end{bullets}
+\sectionsep
 
-% Example using bullets and dates 
-% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
-% \begin{bullets}
-    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
-% \end{bullets}
-% \sectionsep
-  
 
 %--------------------------------------------------------------
 %     Skills
@@ -152,6 +153,11 @@ Created website where players can play Gomoku with each other with communication
     \\
     \singleItem{Technology:}{Git, SQL, Docker, \LaTeX, MongoDB, Spring}
 \end{skillList}
-
 \section{Activities}
+\singleItem{Central Texas Model United Nations}{Organized Model UN conference for highschoolers across Texas}
+\\
+\singleItem{Advancing UT Technology}{Team leader for social media website to connect UT students}
+\\
+\singleItem{Texas Judo}{Participated in Judo contests}
+\\
 \end{document}
