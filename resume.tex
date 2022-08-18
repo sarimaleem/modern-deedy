@@ -24,7 +24,7 @@
 \newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
 
 % Parameters: courses
-\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+\newcommand{\teacherAssistant}[1]{\textbf{Teaching Assistant:} #1}
  
 %--------------------------------------------------------------
 \begin{document}
@@ -56,7 +56,7 @@
 
 \begin{center}
     \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
-    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  % \yourPhone $|$ 
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$ \yourPhone $|$ 
     \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
     \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
     % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
@@ -69,7 +69,8 @@
 % Put school first and degree second if your school is reputable
 \educationHeading{University of Texas at Austin}{B.S. Computer Science, Minor Arabic, GPA: 3.83}{Austin, TX}{May 2024}
 
-% \teacherAssistant{World Wide Web Information Systems Development}
+\teacherAssistant{Elements of Computers/Programming}
+\\
 \courseWork{Data Structures, Algorithms, Computer Architecture, Operating Systems, Distributed Systems, Compilers, Computer Networks, Intro to Machine Learning}
 \sectionsep
 
@@ -79,22 +80,19 @@
 \section{Work Experience}
 \resumeHeading{Fujitsu}{Software Development Intern}{Dallas TX}{Jun 2022 – Aug 2022}
 \begin{bullets}
-    \item Developed webclient to store network element data developed in Java Springin Configuration Persistent Storage database using Java Spring
-    \item Configured Docker files so microservices can communicate with each other in docker-compose
-    \item (alternative?) Configured network bridge in Docker files in order for microservices to communicate with each other
-    \item Migrated topological discovery of network elements from direct drivers to a software defined network controller
-    \item Created bash scripts to automate container deployment and test REST endpoints
-    \item Used Java reactive streams to load balance client requests from frontend and ensure requests are nonblocking (sounds fancier than it is)
+    \item Developed webclient in Java Spring to migrate network element data to CPS database from MongoDB
+    \item Configured network bridge in Docker files to enable cross-communication between 15+ microservices
+    \item Migrated southbound interface from direct drivers to a software defined network controller
+    \item Wrote bash scripts to automate container deployment and test REST endpoints
+    \item Used Java reactive streams to load balance client requests from frontend and ensure requests are nonblocking
 \end{bullets}
 \sectionsep
 
-\resumeHeading{Baylor College of Medicine}{Research Assistant (RA)}{Houston, TX}{Jan 2021 - August 2021}
+\resumeHeading{Baylor College of Medicine}{Research Intern}{Houston, TX}{Jan 2021 - August 2021}
 \begin{bullets}
-    \item Created computer vision model in C++ to fit ellipses to pupils of mice, improving speed over deep learning model by \textbf{50x}
-    \item (alternative?) Created computer vision model in c++ to analyze mice pupil dialation size, faster than deep learning model by \textbf{50x}
+    \item Built computer vision model in C++ to analyze mice pupil dialation size, 50x faster than deep learning model
     \item Programmed Tkinter GUI to edit audio files based on signal patterns and spectrogram
-    \item Developed Python library to analyze pupil dilation of mice 
-    \item Analyzed and Visualized Data with Pandas and Matplotlib 
+    \item Developed Python library to analyze and visualize pupil dilation of mice using Pandas and Matplotlib
 \end{bullets}
 \sectionsep
 
@@ -120,7 +118,7 @@
 
 \projectHeading{Pintos Operating System}{}{C, Concurrency, Operating Systems}
 \begin{bullets}
-    \item Implemented Operating System with Thread Priority Scheduling, System Calls, Virtual Memory, and EXT based File System
+    \item Implemented operating system with thread priority scheduling, system calls, virtual memory, and EXT file system
     \item Debugged race conditions, deadlocks, memory errors, and other bugs using GDB
 \end{bullets}
 \sectionsep
@@ -128,15 +126,15 @@
 \projectHeading{Multiplayer Gomoku with AI}{https://multitictactoe.herokuapp.com/}{Javascript, Express, Web Sockets}
 \begin{bullets}
     \item Created multiplayer website with communication through websockets
-    \item Implemented single player mode with AI using Minimax with Alpha Beta Pruning for 
+    \item Implemented single player mode with AI using minimax with alpha beta pruning 
 \end{bullets}
 \sectionsep
 
-\projectHeading{Sorting Website}{https://sorting-visualizer-1a3ee.firebaseapp.com/}{React.js, Firebase}
-\begin{bullets}
-    \item Created website to visualize sorting algorithms using React.js, deployed using firebase
-\end{bullets}
-\sectionsep
+% \projectHeading{Sorting Website}{https://sorting-visualizer-1a3ee.firebaseapp.com/}{React.js, Firebase}
+% \begin{bullets}
+%     \item Created website to visualize sorting algorithms using React.js, deployed using firebase
+% \end{bullets}
+% \sectionsep
 
 
 %--------------------------------------------------------------
